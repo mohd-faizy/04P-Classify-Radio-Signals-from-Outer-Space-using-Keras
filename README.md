@@ -9,20 +9,22 @@ The model could be optimized using hyperparameter tuning. However, the goal of t
 
 <center><img src='http://blog.yavilevich.com/wp-content/uploads/2016/08/fosphor2-cut.png' width=700 height=200></center>
 
+> ## Objectives:
+    - Build and train a convolutional neural network (CNN) using Keras
+    - Display results and plot 2D spectrograms with Python in Jupyter Notebook
+
 ## __SETI Dataset__
 
 > [__Click here__](https://drive.google.com/file/d/1R2BlsYydirhMmf89_D1imOT5aVvkXHi2/view?usp=sharing)
 
 ## __Packages Used__
 
-```
-Tensorflow
-Sklearn
-Matplotlib
-Numpy
-Pandas
-seaborn
-```
+ - [Tensorflow](https://www.tensorflow.org/)
+ - [Sklearn](https://scikit-learn.org)
+ - [Matplotlib](https://matplotlib.org/)
+ - [Numpy](https://numpy.org/)
+ - [Pandas](https://pandas.pydata.org/)
+ - [seaborn](https://seaborn.pydata.org/)
 
 
 ## __1: Introduction and Import Libaries__
@@ -49,14 +51,15 @@ seaborn
 ## __5: Learning Rate Scheduling and Compile the Model__
 
   - When training a model, it is often recommended to lower the learning rate as the training progresses.
-  - Apply an exponential decay function to the provided initial learning rate.
+  - Apply an [Exponential Decay Function](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay) to the provided initial learning rate.
 
 ## __6: Train the Model__
 
-  - Train the CNN by invoking the model.fit() method.
-  - Use ModelCheckpoint() to save the weights associated with the higher validation accuracy after every epoch
-  - Display live training loss and accuracy plots in Jupyter Notebook using livelossplot.
+  - Train the CNN by invoking the `model.fit()` method.
+  - Use `ModelCheckpoint()` to save the weights associated with the higher validation accuracy after every epoch
+  - Display live training loss and accuracy plots in Jupyter Notebook using [livelossplot](https://github.com/stared/livelossplot).
+  
 ## __7: Evaluate the Model__
 
-  - Evaluate the CNN by invoking the model.fit() method.
+  - Evaluate the CNN by invoking the `model.fit()` method.
   - Obtain the classification report to note the precision and recall of your classifier.
